@@ -14,7 +14,10 @@ export function Home() {
   const handleClick3 = () => {
     navigate('/componentes/VentaFormulario');
   };
-
+const handleClick4 = () => {
+    localStorage.removeItem('token');
+    navigate('/');
+  };
   return (
     <div className="d-flex flex-column justify-content-center align-items-center vh-100 bg-light">
       <div className="card shadow p-5 text-center" style={{ minWidth: '300px' }}>
@@ -31,6 +34,9 @@ export function Home() {
 
           <button onClick={handleClick3} className="btn btn-success">
             Venta
+          </button>
+          <button onClick={handleClick4} className="btn btn-success">
+            Cerrar sesion
           </button>
         </div>
       </div>

@@ -15,6 +15,10 @@ export function VentaFormulario() {
   const handleClick = () => navigate('/componentes/CompraFormulario');
   const handleClick2 = () => navigate('/componentes/KardexVista');
   const handleClick3 = () => navigate('/componentes/VentaFormulario');
+  const handleClick4 = () => {
+    localStorage.removeItem('token');
+    navigate('/');
+  };
 
   useEffect(() => {
     const fetchProductos = async () => {
@@ -122,6 +126,8 @@ export function VentaFormulario() {
         <button className="btn btn-outline-primary me-2" onClick={handleClick}>Compras</button>
         <button className="btn btn-outline-info me-2" onClick={handleClick2}>Kardex</button>
         <button className="btn btn-outline-success" onClick={handleClick3}>Ventas</button>
+         <button className="btn btn-outline-success" onClick={handleClick4}>Cerrar sesion</button>
+     
       </div>
 
       <div className="card">

@@ -12,6 +12,10 @@ export function KardexVista() {
   const handleClick = () => navigate('/componentes/CompraFormulario');
   const handleClick2 = () => navigate('/componentes/KardexVista');
   const handleClick3 = () => navigate('/componentes/VentaFormulario');
+  const handleClick4 = () => {
+    localStorage.removeItem('token');
+    navigate('/');
+  };
 
   useEffect(() => {
     const fetchAllKardex = async () => {
@@ -47,6 +51,7 @@ export function KardexVista() {
         <button className="btn btn-primary" onClick={handleClick}>Compras</button>
         <button className="btn btn-secondary" onClick={handleClick2}>Kardex</button>
         <button className="btn btn-success" onClick={handleClick3}>Ventas</button>
+         <button className="btn btn-outline-success" onClick={handleClick4}>Cerrar sesion</button>
       </div>
 
       <h2 className="text-center mb-4">Lista Kardex de Productos</h2>

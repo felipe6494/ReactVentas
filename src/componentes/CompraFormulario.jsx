@@ -24,6 +24,10 @@ const handleClick2 = () => {
   const handleClick3 = () => {
     navigate('/componentes/VentaFormulario');
   };
+  const handleClick4 = () => {
+    localStorage.removeItem('token');
+    navigate('/');
+  };
  const handleItemChange = (index, field, value) => {
   const nuevosItems = [...items];
   nuevosItems[index][field] = value;
@@ -162,6 +166,8 @@ alert('Compra registrada exitosamente');
       <button type="button" onClick={handleClick} className="btn btn-outline-primary">Compras</button>
       <button type="button" onClick={handleClick2} className="btn btn-outline-secondary">Kardex</button>
       <button type="button" onClick={handleClick3} className="btn btn-outline-success">Ventas</button>
+      <button type="button" onClick={handleClick4} className="btn btn-outline-success">Cerrar sesion</button>
+     
     </div>
 
     <h2 className="mb-4">Registrar Compra</h2>

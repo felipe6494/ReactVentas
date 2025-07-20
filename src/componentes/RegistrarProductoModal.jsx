@@ -68,7 +68,7 @@ export function RegistrarProductoModal({ onClose, onSave }) {
               />
             </div>
             <div className="d-flex justify-content-end">
-              <button type="submit" className="btn btn-success me-2">Guardar</button>
+              <button type="button" className="btn btn-success me-2"onClick={handleSubmit}>Guardar</button>
               <button type="button" className="btn btn-secondary" onClick={onClose}>Cancelar</button>
             </div>
           
